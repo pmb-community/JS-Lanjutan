@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label>Masukan</label>
+  <input id="input">
+  <p>To do :</p>
+  <button id="submit">Submit</button>
+  <div id="container"></div>
+  <script>
+    // Get element
+    const submit = document.getElementById("submit");
+    const input = document.getElementById("input");
+    const container = document.getElementById("container");
+
+    let number = 1;
+
+    // Listener
+    submit.addEventListener("click", function() {
+      // Get value
+      const value = input.value;
+
+      // Make new HTML Element
+      const newElement = document.createElement("p");
+      newElement.innerText = number + ". " + value;
+
+      // Input Element on document
+      container.append(newElement);
+
+      // Delete value on input
+      input.value = "";
+
+      number++;
+    });
+  </script>
+</body>
+</html>
