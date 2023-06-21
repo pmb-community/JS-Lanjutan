@@ -31,7 +31,7 @@ submit.addEventListener("click", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (localStorage.getItem(cacheKey) === 'undefined') {
+  if (localStorage.getItem(cacheKey) === null) {
     localStorage.setItem(cacheKey, JSON.stringify(dataCache));
   } else {
     dataCache = JSON.parse(localStorage.getItem(cacheKey));

@@ -1,10 +1,10 @@
 // Tipe data dan map()
 
-const array = [1, 2, 3, 4, 5, 6, 7];
+const array = [1, 2, 3, "ayam", 5, 6, "kucing", "bebek"];
 
 const bioData = {
-  nama: "kucing",
-  umur: 12
+  nama: "dika",
+  umur: 20
 };
 
 const bioDataMahasiswa = [
@@ -21,3 +21,7 @@ const bioDataMahasiswa = [
     umur: 40,
   },
 ];
+
+bioDataMahasiswa.map(function (data) {
+  console.log(`Halo nama saya ${data.nama} dan umur saya ${data.umur} tahun`)
+})
